@@ -1,31 +1,18 @@
-name: Draw ZMK keymap
+name: Draw ZMK keymaps
 on:
-  workflow_dispatch:
+  workflow_dispatch: # allows manual run
   push:
     paths:
       - "config/*.keymap"
       - "config/*.json"
+      - ".github/workflows/draw-keymap.yml"
 
 jobs:
   draw:
-    runs-on: ubuntu-latest
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install keymap-drawer
-        run: pip install keymap-drawer
-
-      - name: Draw keymap
-        run: |
-          keymap draw config/piantor_pro_bt.keymap > piantor_viz.svg
-
-      - name: Commit and push
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add piantor_viz.svg
-          git commit -m "Update keymap visualization" || exit 0
-          git push
+      contents: write # allow workflow to commit the SVG to the repo
+    with:
+      keymap_patterns: "config/piantor_pro_bt.keymap"
+      output_folder: "keymap-drawer" # results will be saved here
+      parse_args: "piantor_pro_bt:'-c 6'" # tells it the layout has 6 columns per side
