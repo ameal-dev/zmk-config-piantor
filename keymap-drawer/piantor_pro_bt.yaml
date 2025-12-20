@@ -1,0 +1,162 @@
+layout: {zmk_keyboard: piantor_pro_bt}
+layers:
+  BASE:
+  - [TAB, Q, W, E, R, T]
+  - [Y, U, I, O, P, '[']
+  - [LCTRL, A, S, D, F, G]
+  - [H, J, K, L, ;, '''']
+  - [LSHFT, Z, X, C, V, B]
+  - [N, M, ',', ., /, \]
+  - - NAV
+    - NUM
+    - {t: SPACE, h: NAV}
+    - BSPC
+    - {t: RET, h: SYM}
+    - APPS
+  NAV:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - Ctl+PG UP
+    - Ctl+PG DN
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - LGUI
+    - LALT
+    - LCTRL
+    - LSHFT
+    - {t: ▽, type: trans}
+  - - LEFT
+    - DOWN
+    - UP
+    - RIGHT
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - PREV
+    - VOL DN
+    - VOL UP
+    - NEXT
+    - PP
+    - {t: ▽, type: trans}
+  - - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - DEL
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  SYM:
+  - - {t: ▽, type: trans}
+    - '!'
+    - '@'
+    - '#'
+    - $
+    - '%'
+  - [^, '&', '*', (, ), DEL]
+  - - {t: ▽, type: trans}
+    - '`'
+    - '['
+    - (
+    - '{'
+    - <
+  - ['-', '=', '''', '"', \, '`']
+  - - {t: ▽, type: trans}
+    - '~'
+    - ']'
+    - )
+    - '}'
+    - '>'
+  - [_, +, '{', '}', '|', '~']
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+  APPS:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - F21
+    - F22
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - F13
+    - F14
+    - F15
+    - F16
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - F17
+    - F18
+    - F19
+    - F20
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+  NUM:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - [+, '7', '8', '9', '*', '-']
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - [., '4', '5', '6', '=', /]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - '0'
+    - '1'
+    - '2'
+    - '3'
+    - RET
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
