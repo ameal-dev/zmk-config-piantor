@@ -1,6 +1,6 @@
 /*
  * Piantor Pro BT - Hybrid App/Nav/Num/Sym Edition
- * Version 3: Added Angle Brackets
+ * Version 4: Removed Duplicates, Added Quotes to SYM Layer
  */
 
 #include <behaviors.dtsi>
@@ -11,7 +11,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // LAYER 0: BASE
+        // LAYER 0: BASE (Clean QWERTY)
         default_layer {
             display-name = "BASE";
             bindings = <
@@ -22,7 +22,7 @@
             >;
         };
 
-        // LAYER 1: NAV
+        // LAYER 1: NAVIGATION & SYSTEM
         nav_layer {
             display-name = "NAV";
             bindings = <
@@ -33,18 +33,18 @@
             >;
         };
 
-        // LAYER 2: SYM (Now with < >)
+        // LAYER 2: SYMBOLS (Right Inner Thumb + Left/Right fingers)
         symbol_layer {
             display-name = "SYM";
             bindings = <
     &trans     &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT        &kp CARET   &kp AMPS     &kp ASTRK    &kp LPAR  &kp RPAR  &kp DEL
-    &trans     &kp GRAVE   &kp LBKT    &kp LPAR    &kp LBRC    &kp LT           &kp MINUS   &kp EQUAL    &kp LBKT     &kp RBKT  &kp BSLH  &kp GRAVE
+    &trans     &kp GRAVE   &kp LBKT    &kp LPAR    &kp LBRC    &kp LT           &kp MINUS   &kp EQUAL    &kp SQT      &kp DQT   &kp BSLH  &kp GRAVE
     &trans     &kp TILDE   &kp RBKT    &kp RPAR    &kp RBRC    &kp GT           &kp UNDER   &kp PLUS     &kp LBRC     &kp RBRC  &kp PIPE  &kp TILDE
                                        &trans      &trans      &trans           &trans      &trans       &trans
             >;
         };
 
-        // LAYER 3: APPS
+        // LAYER 3: APPS (Right Outer Thumb + Left fingers)
         apps_layer {
             display-name = "APPS";
             bindings = <
@@ -55,7 +55,7 @@
             >;
         };
 
-        // LAYER 4: NUMPAD
+        // LAYER 4: NUMPAD (Left Middle Thumb + Right fingers)
         num_layer {
             display-name = "NUM";
             bindings = <
